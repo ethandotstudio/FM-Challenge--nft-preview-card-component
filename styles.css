@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: calc(320rem / 16);
+  padding: 24px;
+  background-color: var(--main-bg);
+  font-family: "Outfit";
+}
+
+main {
+  padding: 24px;
+  background-color: var(--card-bg);
+  border-radius: calc(20rem / 16);
+  max-width: calc(350rem / 16);
+}
+
+.main-img {
+  border-radius: calc(10rem / 16);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: calc(22rem / 16);
+  font-weight: 600;
+  color: white;
+  margin: 24px 0 12px 0;
+}
+
+p {
+  font-size: calc(18rem / 16);
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.price span {
+  display: flex;
+  align-items: center;
+}
+
+.price span img {
+  margin-inline-end: calc(6.5rem / 16);
+  height: 100%;
+}
+
+.price span:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.price span:last-child {
+  color: var(--soft-blue);
+  font-weight: 400;
+}
+
+hr {
+  border: calc(0.5rem / 16) solid var(--line);
+  margin: calc(16rem / 16) 0;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  font-size: calc(15rem / 16);
+  font-weight: 400;
+  color: white;
+}
+
+.creator img {
+  width: calc(33rem / 16);
+  height: calc(33rem / 16);
+  border: calc(1rem / 16) solid white;
+  border-radius: 50%;
+  margin-inline-end: 16px;
+}
+
+.creator span:nth-child(2) {
+  color: var(--soft-blue);
+  margin-inline-end: 0.5ch;
+}
+
+@media (pointer: fine) {
+  h1:hover,
+  .creator span:last-child:hover {
+    color: var(--cyan);
+    cursor: pointer;
+  }
+
+  .main-img {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .main-img:hover::after {
+    content: url("./images/icon-view.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%, 0.5);
+  }
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+}
