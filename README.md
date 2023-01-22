@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site](https://ethandotstudio.github.io/FM-Challenge--nft-preview-card-component)
+- [Live Site](https://ethandotstudio.github.io/Frontend-Mentor__NFT-Preview-Card-Component)
 
 ## My process
 
